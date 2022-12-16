@@ -1,0 +1,429 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 90vh 90vh 10vh;
+    height: 200vh;
+    width: auto;
+    grid-template-areas:
+        "header"
+        " content1 "
+        " content2  "
+        "footer";
+}
+
+/* Barre de recherche fictive */
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(248, 181, 181);
+    height: 10vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 1px none transparent;
+    overflow: hidden;
+}
+
+.image_header {
+    height: 10vh;
+    width: auto;
+}
+
+/* Page1 */
+.content1 {
+    grid-area: content1;
+    background: linear-gradient(rgb(248, 181, 181), rgb(145, 141, 158));
+    display: grid;
+    grid-template-columns: 3vw auto 3vw;
+    grid-template-rows: 3vh auto 3vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        " rien rien rien"
+        " rien2 image rien3"
+        " rien4 rien4 rien4";
+}
+
+.image-content1 {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Images/alexander-mils-SNLfVYmL8os-unsplash.PNG);
+    background-size: cover;
+}
+
+.texte1 {
+    position: absolute;
+    background-color: #d62828;
+    width: 60vw;
+    height: 55vh;
+    text-align: center;
+    color: rgb(233, 92, 92);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+#commander {
+    font-family: Prata;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #d62828;
+    padding: 10px 30px;
+    border: solid #d62828 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 964ms;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#commander:hover {
+
+    transition: 964ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #f28b8b;
+    color: #ffffff;
+    border: solid 2px #f28b8b;
+}
+
+
+/* Page 2*/
+.content2 {
+    grid-area: content2;
+    background: linear-gradient(rgb(145, 141, 158), rgb(33, 97, 133));
+    display: grid;
+    grid-template-columns: 3vw 47vw auto 3vw;
+    grid-template-rows: 15vh auto 1vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "rien3 sign sign rien2"
+        "rien3 image texte rien2"
+        "rien3 rien rien rien2 ";
+}
+
+.image-content2 {
+    grid-area: image;
+}
+
+#image-content2 {
+    width: 100%;
+    height: auto;
+}
+
+.texte2 {
+    grid-area: texte;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(251, 44, 44);
+    text-shadow: 1px 2px 1px black;
+    row-gap: 2px;
+    margin-left: 1vw;
+    background-image: url(../Images/Arabic-Style-Frame.png);
+    background-repeat: no-repeat;
+    background-size: 44vw 70vh;
+}
+
+.texte2 p,
+h1,
+button {
+    margin-bottom: 5vh;
+}
+
+.texte3 {
+    position: absolute;
+    text-align: center;
+    left: 21.5vw;
+    top: 120vh;
+    width: 10%;
+    color: rgb(46, 10, 10);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#Valeurs {
+    font-family: Prata;
+    font-size: 14px;
+    color: #fff;
+    background-color: #d62828;
+    padding: 10px 30px;
+    border: solid #d62828 2px;
+    border-radius: 50px;
+    transition: 964ms;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#Valeurs:hover {
+
+    transition: 964ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #f28b8b;
+    color: #ffffff;
+    border: solid 2px #f28b8b;
+}
+
+/* Transition dans un style oriental */
+.sign {
+    grid-area: sign;
+}
+
+.sign img {
+    width: 43%;
+    height: 12vh;
+    margin-top: 1vh;
+    margin-left: 27vw;
+    opacity: 0.65;
+    border-top: black solid;
+    border-bottom: black solid;
+}
+
+/*Les riens pour aerer la page*/
+.rien {
+    grid-area: rien;
+}
+
+.rien2 {
+    grid-area: rien2;
+}
+
+.rien3 {
+    grid-area: rien3;
+}
+
+.rien4 {
+    grid-area: rien4;
+}
+
+/* Footer infos */
+.footer {
+    grid-area: footer;
+    height: 10vh;
+    width: auto;
+    background-color: rgb(33, 97, 133);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: dotted black;
+}
+
+.footer p {
+    color: black;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.footer img {
+    height: 8vh;
+    width: auto;
+}
+
+/* Index boxes , liens internes*/
+#index-box1 {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20vw;
+    height: 7.5vh;
+    background-color: rgb(233, 92, 92);
+    color: white;
+    top: 10vh;
+    left: 37vw;
+    border: solid white;
+    border-radius: 30px;
+}
+
+#index-box2 {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20vw;
+    height: 7.5vh;
+    background-color: rgb(18, 69, 89);
+    color: white;
+    top: 183vh;
+    left: 39vw;
+    border: solid white;
+    border-radius: 30px;
+}
+
+.index-box p {
+    margin-top: 2.8vh;
+}
+
+.index-box a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.index-box a:hover p {
+    transition: 865ms;
+    background-color: white;
+    color: black;
+    margin-top: 1.9vh;
+    height: 3vh;
+    width: auto;
+    border-radius: 30px;
+}
+
+/* Responsive */
+@media (min-width: 800px) and (max-width: 1000px) {
+    .texte1 {
+        height: 45vh;
+        width: 60vw;
+        font-size: 19px;
+    }
+
+    #image-content1 {
+        width: 100%;
+        height: 85vh;
+    }
+
+    .texte2 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width:450px) and (max-width: 800px) {
+    .texte1 {
+        height: 45vh;
+        width: 60vw;
+        font-size: 15px;
+    }
+
+    #image-content1 {
+        width: 100%;
+        height: 85vh;
+    }
+
+    #index-box1 {
+        width: 25vw;
+    }
+
+    #index-box2 {
+        width: 25vw;
+    }
+
+    .content2 {
+        grid-template-rows: 15vh 10vh 48vh 1vh;
+        grid-template-areas:
+            "rien3 sign sign rien2"
+            "rien3 image image rien2"
+            "rien3 texte texte rien2 "
+            "rien3 rien4 rien4 rien2";
+    }
+
+    .content2 img {
+        height: 8vh;
+        width: 45vw;
+    }
+
+    .image-content2 img {
+        height: 10vh;
+        width: 100%;
+    }
+
+    .texte2 {
+        font-size: 16px;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: 44vw 70vh;
+    }
+
+    .texte2 p,h1{
+        position: relative;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .texte2 button{
+        position: relative;
+        text-align: center;
+    }
+
+    .texte3 {
+        top: 117vh;
+        left: 40vw;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .texte1 {
+        height: 60vh;
+        width: 60vw;
+        font-size: 15px;
+    }
+
+    .image_header:nth-child(2) {
+        overflow: hidden;
+    }
+
+    #index-box1 {
+        width: 40vw;
+        left: 30vw;
+    }
+
+    #index-box2 {
+        width: 40vw;
+        left: 30vw;
+    }
+
+    .texte3 {
+        top: 117vh;
+        left: 36vw;
+        font-size: 25px;
+    }
+
+    .content2 {
+        grid-template-rows: 15vh auto 25vh 1vh;
+        grid-template-areas:
+            "rien3 sign sign rien2"
+            "rien3 image image rien2"
+            "rien3 texte texte rien2 "
+            "rien3 rien4 rien4 rien2";
+    }
+
+    .content2 img {
+        height: 8vh;
+        width: 45vw;
+    }
+
+    .texte2 {
+        font-size: 15px;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: 44vw 70vh;
+    }
+
+    .texte2 p,
+    h1,
+    button {
+        margin-bottom: 0;
+    }
+
+}
