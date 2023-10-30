@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     height: 200vh;
-
 }
 
 .main {
@@ -62,10 +61,10 @@ body {
 }
 
 .texte1 {
-    position: absolute;
+    position: relative;
     background-color: #d62828;
-    width: 60vw;
-    height: 55vh;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     color: rgb(233, 92, 92);
     font-family: "Lucida Console", Monaco, monospace;
